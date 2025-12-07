@@ -222,7 +222,7 @@ int main() {
         cout << "\nYay! :) A path exists.\n";
     } else 
     {
-        cout << "\nNo path exists.\n";
+        cout << "\nWhoops :{ No path exists.\n";
     }
 
     return 0;
