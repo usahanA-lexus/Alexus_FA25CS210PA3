@@ -152,7 +152,7 @@ bool dfs(int curr_R, int curr_C,
         // Is neighbor valid
         if (next_R >= 0 && next_R < N && // If its  -1 or N then its off the map
             next_C >= 0 && next_C < M && // If its  -1 or M then its off the map
-            maze[next_R][next_C] == 0 && // 0 means its an open path
+            maze[next_R][next_C] == 0 && // 0 means its an open path aka we can go through
             !visited[next_R][next_C])    // Not visited
             {
                 parent_R[next_R][next_C] = curr_R;
@@ -219,6 +219,7 @@ int main() {
     if (found) 
     {
         printPath(exitcell, parent_r, parent_c, ent_r, ent_c);
+        cout << "\nYay! :) A path exists.\n";
     } else 
     {
         cout << "\nNo path exists.\n";
